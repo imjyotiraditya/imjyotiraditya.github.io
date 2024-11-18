@@ -1,85 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jyotiraditya Panda</title>
-    <meta name="title" content="Jyotiraditya Panda - AOSP and BSP Developer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary Meta Tags -->
+    <title>Jyotiraditya Panda • Developer</title>
+    <meta name="title" content="Jyotiraditya Panda • Developer">
     <meta name="description"
-      content="Jyotiraditya Panda - AOSP and BSP Developer specializing in Android custom ROMs and system optimization.">
+      content="AOSP and BSP Developer specializing in Android custom ROMs and system optimization.">
     <meta name="keywords"
       content="AOSP, BSP, Android Development, Custom ROMs, System Optimization, Mobile Development, Android ROM, BSP Development">
     <meta name="author" content="Jyotiraditya Panda">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
-    <meta name="theme-color" content="#100f0f">
+    <meta name="theme-color" content="#1e1e1e">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jyotiraditya.dev/">
-    <meta property="og:title"
-      content="Jyotiraditya Panda - AOSP and BSP Developer">
+    <meta property="og:title" content="Jyotiraditya Panda • Developer">
     <meta property="og:description"
       content="AOSP and BSP Developer specializing in Android custom ROMs and system optimization.">
     <meta property="og:site_name" content="Jyotiraditya Panda">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jyotiraditya.dev/">
-    <meta property="twitter:title"
-      content="Jyotiraditya Panda - AOSP and BSP Developer">
+    <meta property="twitter:title" content="Jyotiraditya Panda • Developer">
     <meta property="twitter:description"
       content="AOSP and BSP Developer specializing in Android custom ROMs and system optimization.">
     <meta property="twitter:creator" content="@im_jyotiraditya">
 
-    <link rel="icon" href="static/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="static/styles.css" />
-    <script src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"></script>
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/styles.css">
   </head>
-  <body oncontextmenu="return false;">
-    <header class="header center">
-      <h3><a href="#" class="link">JP.</a></h3>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="header-logo">jp.dev</a>
+        <nav class="nav-links">
+          <a href="#about" class="nav-link active">~/about</a>
+          <a href="#projects" class="nav-link">~/projects</a>
+          <a href="#contact" class="nav-link">~/contact</a>
+        </nav>
+      </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <!-- About -->
-      <section class="about center">
-        <img src="https://avatars.githubusercontent.com/u/81803340"
-          alt="Jyotiraditya Panda" class="about__img" />
-        <h1>Hi, I am <span class="about__name">Jyotiraditya Panda.</span></h1>
-        <h2 class="about__role">AOSP and BSP Developer.</h2>
-        <p class="about__desc">
-          Passionate about Android Open Source Project (AOSP) and Board Support
-          Packages (BSP), I develop efficient solutions for mobile devices. With
-          expertise in Android development, including custom ROMs and system
-          optimization, I possess proficiency in various programming languages.
-          Driven by curiosity, I aim to advance mobile technology and enhance
-          user experiences. Let's connect on GitHub and LinkedIn to collaborate!
-        </p>
+      <div class="container">
+        <!-- About Section -->
+        <section id="about" class="terminal-section">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+            </div>
+            <span class="terminal-title">about.zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command-block">
+              <div class="command-line">
+                <span class="prompt">
+                  <span class="prompt-path">--- ~</span>
+                  <span class="prompt-arrow"> »</span>
+                </span>
+                <span class="command">cd ~/about</span>
+                <span class="cursor"></span>
+              </div>
+            </div>
 
-        <div class="about__contact center">
-          <a href="https://github.jyotiraditya.dev" aria-label="github"
-            class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+            <div class="profile-content">
+              <img src="https://avatars.githubusercontent.com/u/81803340"
+                alt="Jyotiraditya Panda" class="avatar" loading="lazy">
 
-          <a href="https://linkedin.jyotiraditya.dev" aria-label="linkedin"
-            class="link link--icon">
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </section>
+              <div class="command-block">
+                <div class="command-line">
+                  <span class="prompt">
+                    <span class="prompt-path">--- ~/about</span>
+                    <span class="prompt-arrow"> »</span>
+                  </span>
+                  <span class="command">cat info.txt</span>
+                  <span class="cursor"></span>
+                </div>
+              </div>
+
+              <div class="output">
+                <h1>Jyotiraditya Panda</h1>
+                <h2>AOSP and BSP Developer</h2>
+                <p>Passionate about Android Open Source Project (AOSP) and Board
+                  Support Packages (BSP). I develop efficient solutions for
+                  mobile devices, specializing in custom ROMs and system
+                  optimization.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="terminal-section">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+            </div>
+            <span class="terminal-title">projects.zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command-block">
+              <div class="command-line">
+                <span class="prompt">
+                  <span class="prompt-path">--- ~/projects</span>
+                  <span class="prompt-arrow"> »</span>
+                </span>
+                <span class="command">ls -la</span>
+                <span class="cursor"></span>
+              </div>
+            </div>
+
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-type">
+                  <i class="fas fa-music"></i>
+                  <span>Audio Tools</span>
+                </div>
+                <h3>Audio Metadata Viewer (AMV)</h3>
+                <p>Web-based audio metadata parser supporting multiple formats
+                  and metadata standards. Features drag & drop, clipboard
+                  integration, and Katbin sharing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="terminal-section">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+            </div>
+            <span class="terminal-title">contact.zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command-block">
+              <div class="command-line">
+                <span class="prompt">
+                  <span class="prompt-path">--- ~/contact</span>
+                  <span class="prompt-arrow"> »</span>
+                </span>
+                <span class="command">ls -la</span>
+                <span class="cursor"></span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.jyotiraditya.dev" target="_blank"
+                rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-github"></i>
+                <span class="file-info">drwxr-xr-x
+                  github.jyotiraditya.dev</span>
+              </a>
+              <a href="https://linkedin.jyotiraditya.dev" target="_blank"
+                rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span class="file-info">drwxr-xr-x
+                  linkedin.jyotiraditya.dev</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <a href="https://github.jyotiraditya.dev" class="link footer__link">
-        Created By Jyotiraditya Panda
-      </a>
+      <div class="container">
+        <div class="command-block">
+          <div class="command-line">
+            <span class="prompt">
+              <span class="prompt-path">--- ~</span>
+              <span class="prompt-arrow"> »</span>
+            </span>
+            <span class="command">echo "Created by Jyotiraditya Panda"</span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
