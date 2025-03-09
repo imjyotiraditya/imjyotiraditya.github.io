@@ -1,0 +1,520 @@
+/* Variables */
+:root {
+  /* Theme Colors */
+  --background-color: #121212;
+  --darker-bg: #1a1a1a;
+  --container-bg: #1e1e1e;
+  --element-bg: #252525;
+  --card-bg: #1e1e1e;
+  --border-color: #333;
+  --border-hover: #444;
+
+  /* Text Colors */
+  --text-primary: #e0e0e0;
+  --text-secondary: #888;
+  --text-muted: #666;
+
+  /* Sizing */
+  --header-height: 60px;
+  --container-width: 1200px;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 40px 0;
+}
+
+::selection {
+  background: #444;
+  color: var(--text-primary);
+}
+
+/* Header & Navigation */
+.header {
+  background: var(--darker-bg);
+  border-bottom: 1px solid var(--border-color);
+  height: var(--header-height);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header-logo {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.short-logo {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 14px;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.nav-link:hover,
+.nav-link:target {
+  color: var(--text-primary);
+}
+
+.nav-link:target::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+}
+
+/* Section Components */
+.section {
+  background: var(--darker-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.section:target {
+  border-color: var(--text-primary);
+}
+
+.section-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.section-body {
+  padding: 25px 20px;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+}
+
+.about-info h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.about-info h2 {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-weight: normal;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-info p {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+}
+
+.project-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-identity h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--element-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.project-tag i {
+  margin-right: 5px;
+  color: var(--text-primary);
+}
+
+.project-body {
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+
+.project-body p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.project-actions {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-button {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--element-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.project-button:hover {
+  background: var(--darker-bg);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.project-button i {
+  color: var(--text-secondary);
+}
+
+/* Friends Section */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.friend-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.friend-card:hover {
+  border-color: var(--border-hover);
+}
+
+.friend-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.friend-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.friend-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-identity {
+  flex-grow: 1;
+}
+
+.friend-identity h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.friend-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--element-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.tag-icon {
+  margin-right: 5px;
+  color: var(--text-secondary);
+}
+
+.friend-actions {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.friend-button {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--element-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.friend-button:hover {
+  background: var(--darker-bg);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.friend-button i {
+  color: var(--text-secondary);
+}
+
+/* Contact Section */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.contact-item {
+  padding: 15px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--border-hover);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--element-bg);
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.contact-username {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Footer */
+.footer {
+  background: var(--darker-bg);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 50px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .header-logo {
+    font-size: 18px;
+  }
+
+  .full-logo {
+    display: none;
+  }
+
+  .short-logo {
+    display: block;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto 20px;
+  }
+
+  .projects-grid,
+  .friends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .friend-header {
+    padding: 15px;
+  }
+
+  .friend-actions {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .section-body {
+    padding: 20px 15px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 5px;
+  }
+
+  .project-card,
+  .friend-card {
+    padding: 15px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .about-info h1 {
+    font-size: 20px;
+  }
+
+  .about-info h2 {
+    font-size: 14px;
+  }
+}
