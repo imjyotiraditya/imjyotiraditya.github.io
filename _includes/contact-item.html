@@ -1,0 +1,9 @@
+<a href="{{ include.contact.url }}" {% if include.contact.url contains 'mailto:' %}{% else %}target="_blank" rel="noopener noreferrer"{% endif %} class="contact-item">
+  <div class="contact-icon">
+    <i class="{{ include.contact.icon }}"></i>
+  </div>
+  <div class="contact-info">
+    <div class="contact-name">{{ include.contact.platform }}</div>
+    <div class="contact-username">{{ include.contact.username }}</div>
+  </div>
+</a>

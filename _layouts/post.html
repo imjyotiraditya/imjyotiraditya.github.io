@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<a href="/blog/" class="back-to-blog">
+  <i class="fas fa-arrow-left"></i> Back to Blog
+</a>
+
+<article class="blog-post">
+  <div class="blog-post-header-container">
+    <h1 class="blog-post-title">{{ page.title }}</h1>
+    <div class="blog-post-meta">
+      <div class="post-date"><i class="far fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}</div>
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <span class="post-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="blog-post-content">
+    {{ content }}
+  </div>
+</article>

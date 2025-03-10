@@ -1,0 +1,23 @@
+<div class="friend-card">
+  <div class="friend-header">
+    <div class="friend-avatar">
+      <img src="{{ include.friend.avatar }}" alt="{{ include.friend.name }}" loading="lazy" />
+    </div>
+    <div class="friend-identity">
+      <h3>{{ include.friend.name }}</h3>
+      {% for tag in include.friend.tags %}
+      <div class="friend-tag">
+        <i class="{{ tag.icon }} tag-icon"></i> {{ tag.text }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="friend-actions">
+    <a href="{{ include.friend.website }}" target="_blank" rel="noopener noreferrer" class="friend-button">
+      <i class="fas fa-globe"></i> Website
+    </a>
+    <a href="{{ include.friend.github }}" target="_blank" rel="noopener noreferrer" class="friend-button">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>

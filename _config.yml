@@ -1,0 +1,33 @@
+# Site settings
+title: Jyotiraditya Panda • Developer
+email: me@jyotiraditya.dev
+description: >-
+  AOSP and BSP Developer specializing in Android custom ROMs and system optimization.
+baseurl: ""
+url: "https://jyotiraditya.dev"
+github_username: imjyotiraditya
+linkedin_username: jyotiraditya-panda
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Custom theme settings
+header_pages:
+  - blog/index.md

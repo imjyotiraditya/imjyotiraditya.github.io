@@ -1,0 +1,21 @@
+<div class="project-card">
+  <div class="project-header">
+    <div class="project-identity">
+      <h3>{{ include.project.name }}</h3>
+      <div class="project-tag">
+        <i class="{{ include.project.tagIcon }}"></i> {{ include.project.tagText }}
+      </div>
+    </div>
+  </div>
+  <div class="project-body">
+    <p>{{ include.project.description }}</p>
+  </div>
+  <div class="project-actions">
+    <a href="{{ include.project.repo }}" target="_blank" rel="noopener noreferrer" class="project-button">
+      <i class="fab fa-github"></i> Repository
+    </a>
+    <a href="{{ include.project.demo }}" target="_blank" rel="noopener noreferrer" class="project-button">
+      <i class="fas fa-external-link-alt"></i> View Project
+    </a>
+  </div>
+</div>
