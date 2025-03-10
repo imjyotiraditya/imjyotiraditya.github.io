@@ -1,0 +1,20 @@
+[
+  {
+    "platform": "GitHub",
+    "username": "@imjyotiraditya",
+    "icon": "fab fa-github",
+    "url": "https://github.com/imjyotiraditya"
+  },
+  {
+    "platform": "LinkedIn",
+    "username": "@jyotiraditya-panda",
+    "icon": "fab fa-linkedin",
+    "url": "https://www.linkedin.com/in/jyotiraditya-panda"
+  },
+  {
+    "platform": "Email",
+    "username": "me@jyotiraditya.dev",
+    "icon": "fas fa-envelope",
+    "url": "mailto:me@jyotiraditya.dev"
+  }
+]

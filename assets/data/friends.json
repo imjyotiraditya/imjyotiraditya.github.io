@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Nick",
+    "avatar": "https://avatars.githubusercontent.com/u/36458596",
+    "tags": [
+      {
+        "icon": "fas fa-code",
+        "text": "Developer"
+      }
+    ],
+    "website": "https://nift4.org",
+    "github": "https://github.com/nift4"
+  },
+  {
+    "name": "123Duo3",
+    "avatar": "https://avatars.githubusercontent.com/u/12569997",
+    "tags": [
+      {
+        "icon": "fas fa-code",
+        "text": "Developer"
+      },
+      {
+        "icon": "fas fa-palette",
+        "text": "Designer"
+      }
+    ],
+    "website": "https://duo3.ink",
+    "github": "https://github.com/123Duo3"
+  }
+]
