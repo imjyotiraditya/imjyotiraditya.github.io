@@ -1,0 +1,10 @@
+[
+  {
+    "id": "lorem-ipsum",
+    "title": "Lorem Ipsum: Placeholder Content",
+    "date": "2025-03-10",
+    "tags": ["Sample", "Lorem", "Placeholder"],
+    "summary": "A sample blog post with lorem ipsum content to demonstrate the blog functionality and styling.",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.</p><h2>What is Lorem Ipsum?</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur interdum, nisl nisi aliquet nunc, vitae tincidunt nisl eros eu nulla. Donec eu tincidunt nisl. Sed euismod, nisi vel consectetur interdum, nisl nisi aliquet nunc, vitae tincidunt nisl eros eu nulla.</p><p>Etiam auctor nisl et <strong>justo sodales</strong> pellentesque. Morbi at odio vehicula, consectetur metus ut, porttitor neque. Nam est enim, volutpat nec tincidunt id, pretium a orci.</p><h2>Code Example</h2><p>Here's a simple code example to demonstrate the syntax highlighting:</p><pre><code>// A simple function to add two numbers\nfunction add(a, b) {\n  return a + b;\n}\n\n// Using the function\nconst result = add(5, 3);\nconsole.log(`The result is: ${result}`);</code></pre><h2>Lists and Formatting</h2><p>Here's a list of items:</p><ul><li>First item with <em>emphasized text</em></li><li>Second item with <strong>strong text</strong></li><li>Third item with <code>inline code</code></li><li>Fourth item with a <a href=\"#\">link</a></li></ul><p>And here's an ordered list:</p><ol><li>First step in the process</li><li>Second step in the process</li><li>Third step in the process</li><li>Final step in the process</li></ol><h2>Blockquote Example</h2><blockquote><p>This is a blockquote. It can be used to highlight important information or quotes from other sources.</p></blockquote><p>In conclusion, this sample post demonstrates various HTML elements and styling that can be used in your blog posts. Feel free to use this as a template for future posts.</p>"
+  }
+]

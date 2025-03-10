@@ -31,7 +31,7 @@ class DataManager {
    * @returns {Promise<Array>} Projects data
    */
   async getProjects() {
-    return await this.fetchData("assets/data/projects.json");
+    return await this.fetchData("/assets/data/projects.json");
   }
 
   /**
@@ -40,7 +40,7 @@ class DataManager {
    * @returns {Promise<Array>} Friends data
    */
   async getFriends() {
-    return await this.fetchData("assets/data/friends.json");
+    return await this.fetchData("/assets/data/friends.json");
   }
 
   /**
@@ -49,7 +49,16 @@ class DataManager {
    * @returns {Promise<Array>} Contacts data
    */
   async getContacts() {
-    return await this.fetchData("assets/data/contacts.json");
+    return await this.fetchData("/assets/data/contacts.json");
+  }
+
+  /**
+   * Load blog posts data
+   *
+   * @returns {Promise<Array>} Blog posts data
+   */
+  async getBlogPosts() {
+    return await this.fetchData("/assets/data/blog-posts.json");
   }
 }
 

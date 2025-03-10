@@ -1,10 +1,15 @@
 import DataManager from "./data.js";
+import { initBlogList, initBlogPost } from "./blog.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize all dynamic sections
   initProjects();
   initFriends();
   initContacts();
+
+  // Initialize blog sections if on relevant pages
+  initBlogList();
+  initBlogPost();
 });
 
 /**
