@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const codeBlocks = document.querySelectorAll(".blog-post-content pre");
+  const codeBlocks = document.querySelectorAll(".blog-post-content pre code");
 
-  codeBlocks.forEach(function (codeBlock, index) {
-    const code = codeBlock.querySelector("code");
-    if (!code) return;
+  codeBlocks.forEach(function (codeElement, index) {
+    const preElement = codeElement.parentNode;
+    if (!preElement || preElement.tagName !== "PRE") return;
 
-    let language = "code";
-    const classes = code.className.split(" ");
+    // Add line-numbers class for the plugin
+    preElement.classList.add("line-numbers");
+
+    let language = "plaintext";
+    const classes = codeElement.className.split(" ");
     for (const cls of classes) {
       if (cls.startsWith("language-")) {
         language = cls.replace("language-", "");
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     copyButton.className = "copy-button";
     copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy';
     copyButton.onclick = function () {
-      const codeText = code.textContent;
+      const codeText = codeElement.textContent;
       navigator.clipboard
         .writeText(codeText)
         .then(function () {
@@ -49,8 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     header.appendChild(copyButton);
 
     container.appendChild(header);
+    preElement.parentNode.insertBefore(container, preElement);
+    container.appendChild(preElement);
 
-    codeBlock.parentNode.insertBefore(container, codeBlock);
-    container.appendChild(codeBlock);
+    if (!codeElement.classList.contains("language-none")) {
+      // Make sure Prism is available before highlighting
+      if (typeof Prism !== "undefined") {
+        Prism.highlightElement(codeElement);
+      }
+    }
   });
 });
