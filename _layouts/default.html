@@ -59,5 +59,9 @@
         &copy; {{ site.time | date: '%Y' }} Jyotiraditya Panda. All rights reserved.
       </div>
     </footer>
+
+    {% if page.layout == 'post' %}
+    <script src="/assets/js/blog.js"></script>
+    {% endif %}
   </body>
 </html>
