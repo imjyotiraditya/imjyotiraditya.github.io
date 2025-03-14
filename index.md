@@ -49,20 +49,6 @@ layout: default
   </div>
 </section>
 
-<!-- Friends Section -->
-<section id="friends" class="section">
-  <div class="section-header">
-    <h2 class="section-title">Friends</h2>
-  </div>
-  <div class="section-body">
-    <div class="friends-grid">
-      {% for friend in site.data.friends %}
-        {% include friend-card.html friend=friend %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- Contact Section -->
 <section id="contact" class="section">
   <div class="section-header">
