@@ -15,6 +15,9 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
+# Allow future posts
+future: true
+
 # Exclude from processing.
 exclude:
   - .sass-cache/
