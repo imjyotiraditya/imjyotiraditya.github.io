@@ -3,18 +3,18 @@
   tagText: Analytics Tool
   description: A clean, minimalist web app that provides simple release analytics for GitHub repositories. Visualize release patterns, download statistics, and version history at a glance.
   repo: https://github.com/imjyotiraditya/grs
-  demo: https://jyotiraditya.dev/grs/
+  demo: /grs/
 
 - name: SwiftDocs
   tagIcon: fas fa-file-pdf
   tagText: Documentation Tool
   description: A modern web interface for generating PDF documentation from OpenAPI/Swagger specifications with extensive customization options and multiple input methods.
   repo: https://github.com/imjyotiraditya/swiftdocs
-  demo: https://jyotiraditya.dev/swiftdocs/
+  demo: /swiftdocs/
 
 - name: Audio Metadata Viewer (AMV)
   tagIcon: fas fa-music
   tagText: Audio Tools
   description: Web-based audio metadata parser supporting multiple formats and metadata standards. Features drag & drop, clipboard integration, and Katbin sharing.
   repo: https://github.com/imjyotiraditya/amv
-  demo: https://jyotiraditya.dev/amv/
+  demo: /amv/

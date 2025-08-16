@@ -47,8 +47,8 @@
     <header class="header">
       <div class="container">
         <a href="/" class="header-logo">
-          <span class="full-logo">jyotiraditya.dev</span>
-          <span class="short-logo">jp.dev</span>
+          <span class="full-logo" id="full-logo">jyotiraditya.dev</span>
+          <span class="short-logo" id="short-logo">jp.dev</span>
         </a>
         <nav class="nav-links">
           {% for item in site.data.navigation %}
@@ -67,6 +67,41 @@
         &copy; {{ site.time | date: '%Y' }} Jyotiraditya Panda. All rights reserved.
       </div>
     </footer>
+
+    <!-- Dynamic domain script -->
+    <script>
+      (function() {
+        const hostname = window.location.hostname;
+        const fullLogo = document.getElementById('full-logo');
+        const shortLogo = document.getElementById('short-logo');
+        
+        if (fullLogo && shortLogo) {
+          fullLogo.textContent = hostname;
+          
+          // Smart short version generator
+          const parts = hostname.split('.');
+          if (parts.length >= 2) {
+            const firstPart = parts[0];
+            const tld = parts[parts.length - 1];
+            
+            let shortName;
+            if (firstPart.length <= 3) {
+              shortName = firstPart;
+            } else {
+              // Create abbreviation: first letter + first consonant
+              const consonants = firstPart.slice(1).split('').find(char => 
+                !'aeiou'.includes(char.toLowerCase())
+              );
+              shortName = firstPart.charAt(0) + (consonants || firstPart.charAt(1));
+            }
+            
+            shortLogo.textContent = shortName + '.' + tld;
+          } else {
+            shortLogo.textContent = hostname.substring(0, 3) + '...';
+          }
+        }
+      })();
+    </script>
 
     {% if page.layout == 'post' %}
     <!-- Prism.js for syntax highlighting -->
