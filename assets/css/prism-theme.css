@@ -4,7 +4,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  font-family: "Fira Code", monospace;
+  font-family: 'Berkeley Mono', monospace;
   font-size: 14px;
   line-height: 1.6;
   text-align: left;
@@ -24,7 +24,7 @@ pre[class*="language-"] {
   margin: 0;
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
   padding: 2px 5px;
   border-radius: 3px;
   white-space: normal;
@@ -127,7 +127,7 @@ pre.line-numbers {
   counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
+pre.line-numbers>code {
   position: relative;
   white-space: inherit;
 }
@@ -144,12 +144,12 @@ pre.line-numbers > code {
   user-select: none;
 }
 
-.line-numbers-rows > span {
+.line-numbers-rows>span {
   display: block;
   counter-increment: linenumber;
 }
 
-.line-numbers-rows > span:before {
+.line-numbers-rows>span:before {
   content: counter(linenumber);
   color: #6a6a6a;
   display: block;

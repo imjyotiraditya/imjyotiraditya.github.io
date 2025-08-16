@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "Fira Code", monospace;
+    font-family: var(--font-mono);
     background-color: var(--background-color);
     color: var(--text-primary);
     line-height: 1.6;

@@ -1,3 +1,12 @@
+/* Font Face Definition */
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('https://r2cdn.perplexity.ai/fonts/BerkeleyMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Variables */
 :root {
     /* Theme Colors */
@@ -17,4 +26,7 @@
     /* Sizing */
     --header-height: 60px;
     --container-width: 1200px;
+
+    /* Fonts */
+    --font-mono: 'Berkeley Mono', monospace;
 }
